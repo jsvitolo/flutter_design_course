@@ -32,13 +32,16 @@ class HomeWidget extends StatelessWidget {
 class ButtonIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 300,
-      height: 50,
-      color: Colors.red,
-      child: Icon(
-        Icons.add,
-        color: Colors.white,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 30),
+      child: Container(
+        width: double.infinity,
+        height: 50,
+        color: Colors.red,
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
       ),
     );
   }
@@ -47,16 +50,19 @@ class ButtonIcon extends StatelessWidget {
 class ButtonText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 300,
-      height: 50,
-      color: Colors.blue,
-      alignment: Alignment.center,
-      child: Text(
-        "Text",
-        style: TextStyle(
-            color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
-        textAlign: TextAlign.center,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 30),
+      child: Container(
+        width: double.infinity,
+        height: 50,
+        color: Colors.blue,
+        alignment: Alignment.center,
+        child: Text(
+          "Text",
+          style: TextStyle(
+              color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
+        ),
       ),
     );
   }
