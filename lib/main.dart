@@ -35,9 +35,17 @@ class ButtonIcon extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 30),
       child: Container(
+        decoration: BoxDecoration(
+            color: Colors.red,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: <BoxShadow>[
+              BoxShadow(
+                  color: Colors.black.withOpacity(0.5),
+                  offset: Offset(3, 5),
+                  blurRadius: 7)
+            ]),
         width: double.infinity,
         height: 50,
-        color: Colors.red,
         child: Icon(
           Icons.add,
           color: Colors.white,
@@ -53,9 +61,17 @@ class ButtonText extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 30),
       child: Container(
+        decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: <BoxShadow>[
+              BoxShadow(
+                  color: Colors.black.withOpacity(0.5),
+                  offset: Offset(3.0, 5.0),
+                  blurRadius: 7)
+            ]),
         width: double.infinity,
         height: 50,
-        color: Colors.blue,
         alignment: Alignment.center,
         child: Text(
           "Text",
