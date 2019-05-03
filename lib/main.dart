@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_design_course/button-text-icon.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,15 +19,24 @@ class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.yellow,
+      color: Colors.white,
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          ButtonIcon(),
-          ButtonText(),
-          ButtonTextIcon(),
+          Image.asset(
+            "assets/logo.png",
+          ),
+          ButtonTextIcon(
+            color: Colors.red,
+            iconData: Icons.add_a_photo,
+            text: "Login com Google",
+          ),
+          ButtonTextIcon(
+              color: Colors.blue,
+              iconData: Icons.add_circle_outline,
+              text: "Login com Facebook"),
           SizedBox(
             height: 30,
           ),
@@ -105,52 +115,6 @@ class ButtonText extends StatelessWidget {
           style: TextStyle(
               color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
           textAlign: TextAlign.center,
-        ),
-      ),
-    );
-  }
-}
-
-class ButtonTextIcon extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 30),
-      child: Container(
-        decoration: BoxDecoration(
-            color: Colors.blue,
-            borderRadius: BorderRadius.circular(10),
-            boxShadow: <BoxShadow>[
-              BoxShadow(
-                  color: Colors.black.withOpacity(0.5),
-                  offset: Offset(3.0, 5.0),
-                  blurRadius: 7)
-            ]),
-        width: double.infinity,
-        height: 50,
-        alignment: Alignment.center,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Expanded(
-              flex: 1,
-              child: Icon(
-                Icons.add,
-                color: Colors.white,
-              ),
-            ),
-            Expanded(
-              flex: 3,
-              child: Text(
-                "Click Aqui",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold),
-                textAlign: TextAlign.left,
-              ),
-            ),
-          ],
         ),
       ),
     );
