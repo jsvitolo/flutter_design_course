@@ -17,16 +17,47 @@ class MyApp extends StatelessWidget {
 class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-          width: 300,
-          height: 50,
-          color: Colors.red,
-          alignment: Alignment.center,
-          child: Icon(
-            Icons.add_a_photo,
-            color: Colors.white,
-          )),
+    return Container(
+      color: Colors.yellow,
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[ButtonIcon(), ButtonText()],
+      ),
+    );
+  }
+}
+
+class ButtonIcon extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 300,
+      height: 50,
+      color: Colors.red,
+      child: Icon(
+        Icons.add,
+        color: Colors.white,
+      ),
+    );
+  }
+}
+
+class ButtonText extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 300,
+      height: 50,
+      color: Colors.blue,
+      alignment: Alignment.center,
+      child: Text(
+        "Text",
+        style: TextStyle(
+            color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }
