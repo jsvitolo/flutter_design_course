@@ -23,7 +23,34 @@ class HomeWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[ButtonIcon(), ButtonText()],
+        children: <Widget>[
+          ButtonIcon(),
+          ButtonText(),
+          ButtonTextIcon(),
+          SizedBox(
+            height: 30,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              Container(
+                width: 50,
+                height: 50,
+                color: Colors.cyan,
+              ),
+              Container(
+                width: 50,
+                height: 50,
+                color: Colors.indigo,
+              ),
+              Container(
+                width: 50,
+                height: 50,
+                color: Colors.pink,
+              )
+            ],
+          )
+        ],
       ),
     );
   }
@@ -78,6 +105,49 @@ class ButtonText extends StatelessWidget {
           style: TextStyle(
               color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
           textAlign: TextAlign.center,
+        ),
+      ),
+    );
+  }
+}
+
+class ButtonTextIcon extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 30),
+      child: Container(
+        decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: <BoxShadow>[
+              BoxShadow(
+                  color: Colors.black.withOpacity(0.5),
+                  offset: Offset(3.0, 5.0),
+                  blurRadius: 7)
+            ]),
+        width: double.infinity,
+        height: 50,
+        alignment: Alignment.center,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Icon(
+              Icons.add,
+              color: Colors.white,
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Text(
+              "Text",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+          ],
         ),
       ),
     );
