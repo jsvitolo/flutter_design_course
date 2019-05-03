@@ -19,17 +19,14 @@ class HomeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: 300,
-        height: 50,
-        color: Colors.red,
-        alignment: Alignment.center,
-        child: Text(
-          "Super Text",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
-        ),
-      ),
+          width: 300,
+          height: 50,
+          color: Colors.red,
+          alignment: Alignment.center,
+          child: Icon(
+            Icons.add_a_photo,
+            color: Colors.white,
+          )),
     );
   }
 }
