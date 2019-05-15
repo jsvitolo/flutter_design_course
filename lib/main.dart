@@ -19,14 +19,21 @@ class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("assets/background_white.jpg"),
+              fit: BoxFit.cover)),
+      // color: Colors.white,
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Image.asset(
-            "assets/logo.png",
+            "assets/logo_pizza.jpg",
+          ),
+          SizedBox(
+            height: 10,
           ),
           ButtonTextIcon(
             color: Colors.red,
