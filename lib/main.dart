@@ -25,19 +25,21 @@ class HomeWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          RaisedButton(
-            onPressed: () {
-              print("RaisedButton");
-            },
-            child: Text("Click button"),
-            color: Colors.blue,
+          CircleAvatar(
+            backgroundColor: Colors.blue,
+            child: Text("J"),
           ),
-          RaisedButton.icon(
-            onPressed: () {
-              print("RaisedButton.icon");
-            },
-            icon: Icon(Icons.android),
-            label: Text("Click button"),
+          SizedBox(height: 50),
+          Container(
+            height: 40,
+            width: 40,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+                color: Colors.blue, borderRadius: BorderRadius.circular(40)),
+            child: Text(
+              "J",
+              style: TextStyle(color: Colors.white),
+            ),
           )
         ],
       ),
